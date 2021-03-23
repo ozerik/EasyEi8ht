@@ -126,7 +126,7 @@ void setup() {
   pinMode(A4, INPUT_PULLUP);        //PINC  B000x0000   clock trigger in
   pinMode(A5, OUTPUT);              //PORTC B00x00000   flashy light
 
-  Serial.begin(115200);
+//   Serial.begin(115200);
 
 }
 
@@ -135,11 +135,6 @@ void setup() {
 
 
 void loop() {
-  Serial.print(recPins);
-  Serial.print(F(" recPins    "));
-  Serial.print(switchPosition);
-  Serial.print(F(" switchPosition     "));
-  Serial.println(extTap);
 
   { // reset detector
     if (((PIND & B00000001) == 0) && (resetted == 0)) {
